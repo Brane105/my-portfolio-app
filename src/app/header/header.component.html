@@ -1,0 +1,41 @@
+<!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+      <a routerLink="/home" class="logo" style="display: flex; justify-content: space-around;">
+        <img src="assets/images/logo.svg" style="width: 30px" width="151" height="28" alt="Jassa home">
+        <img src="assets/images/a1.png" style="width: 50px;" width="50" height="28" alt="">
+    </a>
+    
+      <nav class="navbar" data-navbar [ngClass]="status ? 'active' : ''">
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a routerLink="/home" class="label-lg navbar-link has-after" routerLinkActive="active">Home</a>
+          </li>
+
+          <li class="navbar-item">
+            <a routerLink="/service"  class="label-lg navbar-link has-after" routerLinkActive="active">Services</a>
+          </li>
+
+          <li class="navbar-item">
+            <a routerLink="/portfolio"  class="label-lg navbar-link has-after" routerLinkActive="active">Portfolio</a>
+          </li>
+
+          <li class="navbar-item">
+            <a routerLink="/contact"  class="label-lg navbar-link has-after" routerLinkActive="active">Contact</a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <a routerLink="/contact" class="btn btn-primary">Contact Now</a>
+
+      <button class="nav-toggle-btn" aria-label="menu" data-nav-toggler (click)="addToggle()">
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+    </div>
+  </header>

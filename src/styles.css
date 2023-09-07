@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+/* Change scrollbar width */
+::-webkit-scrollbar {
+  width: 10px; /* You can adjust the width as needed */
+}
+
+/* Change scrollbar track color (the background) */
+::-webkit-scrollbar-track {
+  background-color: #ecc1ae; /* Change to your desired color */
+}
+
+/* Change scrollbar thumb color (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background-color: #f79263; /* Change to your desired color */
+  border-radius: 10px;
+}
+
+/* Change scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #fb611a; /* Change to your desired color */
+}
+
