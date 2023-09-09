@@ -10,7 +10,7 @@
       style="background-image: url('./assets/images/contact-bg.png')"
     >
       <div class="container">
-        <form action="" class="contact-form">
+        <form [formGroup]="formdata" (ngSubmit) = "sendEmail(formdata.value)" class="contact-form">
           <h2 class="headline-sm" id="contact-label">Get in touch</h2>
 
           <p class="contact-text body-md">
@@ -19,12 +19,13 @@
 
           <div class="wrapper">
             <div>
-              <label for="name" class="label">First name</label>
+              <label for="from_name" class="label">First name</label>
 
               <input
                 type="text"
-                name="name"
-                id="name"
+                name="from_name"
+                id="from_name"
+                formControlName="from_name"
                 placeholder="Name *"
                 required
                 class="input-field"
@@ -38,6 +39,7 @@
                 type="email"
                 name="email"
                 id="email"
+                formControlName="from_email"
                 placeholder="Email *"
                 required
                 class="input-field"
@@ -49,6 +51,7 @@
           <input
             type="text"
             name="subject"
+            formControlName="subject"
             id="subject"
             placeholder="Subject *"
             class="input-field"
@@ -58,16 +61,32 @@
           <textarea
             name="message"
             id="message"
+            formControlName="message"
             placeholder="Your message *"
             required
             class="input-field"
           ></textarea>
 
-          <a href="#" class="btn btn-tertiary">Send Message</a>
+          <button type="submit" class="btn btn-tertiary">Send Message</button>
         </form>
 
         <div class="contact-content">
           <ul class="contact-list">
+            <li class="contact-item">
+              <div
+                class="item-icon"
+                style="background-color: hsl(4, 95%, 77%)"
+              >
+              <ion-icon name="grid-outline"></ion-icon>
+              </div>
+              <div>
+                <p class="label-lg">Replit</p>
+                <a href="https://replit.com/@BhalchandraRane" class="body-lg"
+                target="_blank"
+                  >Replit Brane</a
+                >
+              </div>
+            </li>
             <li class="contact-item">
               <div
                 class="item-icon"
@@ -109,8 +128,8 @@
               </div>
               <div>
                 <p class="label-lg">Mail</p>
-                <a href="mailto:bhalchandrarane057@gmail.com" class="body-lg"
-                  >bhalchandrarane057@gmail.com</a
+                <a href="mailto:lucidev25@gmail.com" class="body-lg"
+                  >Brane Email</a
                 >
               </div>
             </li>
