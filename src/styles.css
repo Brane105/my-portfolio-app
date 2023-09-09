@@ -1,7 +1,10 @@
 /* Change scrollbar width */
+@import "node_modules/angular-notifier/styles";
+
 ::-webkit-scrollbar {
   width: 10px; /* You can adjust the width as needed */
 }
+/* Import angular-notifier styles */
 
 /* Change scrollbar track color (the background) */
 ::-webkit-scrollbar-track {

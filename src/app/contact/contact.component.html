@@ -9,12 +9,12 @@
       aria-labelledby="contact-label"
       style="background-image: url('./assets/images/contact-bg.png')"
     >
+
       <div class="container">
         <form [formGroup]="formdata" (ngSubmit) = "sendEmail(formdata.value)" class="contact-form">
           <h2 class="headline-sm" id="contact-label">Get in touch</h2>
-
           <p class="contact-text body-md">
-            Our friendly team would love to hear from you.
+           I would love to hear from you.
           </p>
 
           <div class="wrapper">
@@ -129,7 +129,7 @@
               <div>
                 <p class="label-lg">Mail</p>
                 <a href="mailto:lucidev25@gmail.com" class="body-lg"
-                  >Brane Email</a
+                  >braneLuciDev@gmail.com</a
                 >
               </div>
             </li>
@@ -148,7 +148,9 @@
             </li>
           </ul>
         </div>
+        <notifier-container></notifier-container>
       </div>
     </section>
   </article>
 </main>
+
