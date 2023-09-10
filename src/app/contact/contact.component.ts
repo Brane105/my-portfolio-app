@@ -36,15 +36,16 @@ export class ContactComponent {
 	}
   ngOnInit() {
     this.formdata = new FormGroup({
-      from_name: new FormControl(""),
-      from_email: new FormControl(""),
-      subject: new FormControl(""),
-      message: new FormControl("")
+      from_name: new FormControl(null),
+      from_email: new FormControl(null),
+      subject: new FormControl(null),
+      message: new FormControl(null)
     });
  }
   sendEmail(data:any) {
-    console.log(data)
-    if(data.from_name != '' && data.from_email != '' && data.message != '' && data.subject != ''){
+    // console.log(Object.values(data))
+    let data1 = Object.values(data).every(el => el !== null)
+    if(data1){
       emailjs.send('service_a18ko9m', 'template_jwhigqe', data,'2ithvLZdAFQsBsBrt')
       .then((response: EmailJSResponseStatus) => {
         console.log('Email sent:', response);
