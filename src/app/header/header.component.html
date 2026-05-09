@@ -1,6 +1,6 @@
 <header class="header">
   <div class="container header-shell">
-    <a routerLink="/home" class="brand" aria-label="Bhalchandra Rane home">
+    <a routerLink="/" class="brand" aria-label="Bhalchandra Rane home">
       <span class="brand-mark">BR</span>
       <span>
         <strong>Bhalchandra Rane</strong>
@@ -11,7 +11,7 @@
     <nav class="navbar" [ngClass]="status ? 'active' : ''" aria-label="Primary navigation">
       <ul class="navbar-list">
         <li>
-          <a routerLink="/home" class="navbar-link" routerLinkActive="active" (click)="closeMenu()">
+          <a routerLink="/" class="navbar-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">
             <ion-icon name="home-outline" aria-hidden="true"></ion-icon>
             <span>Home</span>
           </a>

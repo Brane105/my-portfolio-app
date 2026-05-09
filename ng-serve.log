@@ -2,11 +2,11 @@
 Initial Chunk Files                                                                                     | Names                   |  Raw Size
 vendor.js                                                                                               | vendor                  |   3.32 MB |
 polyfills.js                                                                                            | polyfills               | 333.19 kB |
-styles.css, styles.js                                                                                   | styles                  | 249.45 kB |
-main.js                                                                                                 | main                    |  74.60 kB |
+styles.css, styles.js                                                                                   | styles                  | 252.09 kB |
+main.js                                                                                                 | main                    |  80.28 kB |
 runtime.js                                                                                              | runtime                 |  14.15 kB |
 
-| Initial Total           |   3.97 MB
+| Initial Total           |   3.98 MB
 
 Lazy Chunk Files                                                                                        | Names                   |  Raw Size
 polyfills-core-js.js                                                                                    | polyfills-core-js       | 152.21 kB |
@@ -66,9 +66,15 @@ node_modules_ionic_core_dist_esm_ion-text_entry_js.js                           
 node_modules_ionic_core_dist_esm_ion-backdrop_entry_js.js                                               | -                       |   3.26 kB |
 node_modules_ionic_core_dist_esm_status-tap-823a0df3_js.js                                              | status-tap-823a0df3-js  |   2.91 kB |
 
-Build at: 2026-05-09T14:30:28.983Z - Hash: 2c93ecfdcd9018d7 - Time: 16606ms
+Build at: 2026-05-09T15:07:07.351Z - Hash: 27d3635d955df2be - Time: 11404ms
 
-** Angular Live Development Server is listening on 127.0.0.1:4200, open your browser on http://127.0.0.1:4200/ **
+** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
 
+
+√ Compiled successfully.
+
+61 unchanged chunks
+
+Build at: 2026-05-09T15:07:09.404Z - Hash: 27d3635d955df2be - Time: 1022ms
 
 √ Compiled successfully.
