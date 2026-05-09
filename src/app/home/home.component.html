@@ -1,378 +1,142 @@
 <main>
-  <article>
-    <section class="section hero" aria-label="home">
-      <div class="container">
-        <div class="hero-content">
-          <p class="hero-subtitle">Hi, My name is Bhalchandra Rane</p>
+  <section class="hero section">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <p class="eyebrow">Mumbai based full stack engineer</p>
+        <h1 class="headline-lg">I build reliable web apps for real business workflows.</h1>
+        <p class="hero-text body-md">
+          I am Bhalchandra Rane, a software engineer with 4+ years of enterprise experience at
+          Reliance Industries, focused on Angular, React, Node.js, Spring Boot, databases, and
+          cloud-ready deployments.
+        </p>
 
-          <h1 class="headline-lg">I'm a Software Engineer</h1>
-
-          <p class="hero-text body-md">Based in Mumbai Maharashtra, India.</p>
-
-          <a href="#about" class="btn btn-primary">Let's Start</a>
+        <div class="hero-actions">
+          <a routerLink="/portfolio" class="btn btn-primary">View Projects</a>
+          <a routerLink="/contact" class="btn btn-secondary">Start a Conversation</a>
         </div>
 
-        <figure class="hero-banner">
-          <img src="assets/images/about2.png" width="680" height="645" alt="Bhalchandra Rane, Software Engineer"
-            class="w-100" />
-        </figure>
-      </div>
-    </section>
-
-    <!-- 
-        - #CLIENT
-      -->
-
-    <section class="client" aria-label="Trusted client">
-      <div class="container">
-        <ul class="slider">
-          <li class="slider-item">
-            <p class="text1 w-100" width="130" height="40">
-              RELIANCE INDUSTRIES</p>
-          </li>
-          <li class="slider-item">
-            <p class="text1 w-100" width="130" height="40">RIGVED TECHNOLOGIES</p>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section about" aria-label="about me">
-      <div class="container">
-        <figure class="about-banner">
-          <img src="assets/images/aboutinfo1.png" width="580" height="554" loading="lazy"
-            alt="Bhalchandra Rane, Software Engineer" class="w-100" />
-        </figure>
-
-        <div class="about-content" id="about">
-          <h2 class="title-lg">
-            I'm a Software Engineer with over 4 years of
-            experience.
-          </h2>
-
-          <p class="body-md section-text">
-            I am a <strong>Software Engineer / Full Stack Developer</strong> with over
-            <strong>4+ years of corporate experience</strong>, currently working at
-            <strong>Reliance Industries Ltd.</strong> I have delivered and maintained
-            <strong>enterprise-scale applications</strong> such as
-            <strong>Self Verification</strong>, <strong>Gap Assessment</strong>,
-            <strong>Plant Video Surveillance</strong>, and <strong>Management of Change (MOC)</strong>,
-            focusing on <strong>feature development</strong>, <strong>debugging</strong>,
-            <strong>problem-solving</strong>, and <strong>cross-functional collaboration</strong>.
-            Alongside corporate projects, I have built multiple <strong>personal applications</strong>
-            demonstrating hands-on expertise in
-            <strong>Angular, React, Node.js, Spring Boot</strong>, and
-            <strong>cloud-native deployments</strong> using
-            <strong>Azure, Kubernetes, Firebase, Railway, and Vercel</strong>.
-
-            <span style="display: flex; align-items: center; margin-top: 6px;">
-              <ion-icon name="logo-octocat"></ion-icon>
-              <a href="https://github.com/Brane105" style="margin: 0 8px;" target="_blank"><strong>GitHub</strong></a>
-              <ion-icon name="briefcase-outline"></ion-icon>
-              <a href="https://brane-portfolio-app.vercel.app/" style="margin-left: 8px;"
-                target="_blank"><strong>Portfolio</strong></a>
-            </span>
-          </p>
-
-
-          <ul class="about-list">
-            <li>
-              <p class="list-text">
-                <strong class="strong title-md">42+</strong> Git Repositories
-              </p>
-            </li>
-            <li>
-              <p class="list-text">
-                <strong class="strong title-md">11+</strong> Reliance Projects
-              </p>
-            </li>
-            <li>
-              <p class="list-text">
-                <strong class="strong title-md">5+</strong> Live Projects
-              </p>
-            </li>
-          </ul>
-
-          <div class="wrapper">
-            <a routerLink="/contact" class="btn btn-primary">Contact Me</a>
-
-            <a routerLink="/portfolio" class="btn btn-secondary">Portfolio</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 
-        - #SKILL
-      -->
-
-    <div class="skill" aria-labelledby="skill-label">
-      <div style="width: 100%;padding-inline: 40px;">
-        <h2 class="section-title headline-md" id="skill-label"
-          style="text-align: left; font-size: 3rem; font-weight: 700;">
-          <br>
-          MY SKILLS
-        </h2>
-
-        <ul class="skill-list"
-          style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; list-style: none; padding: 0px;padding-inline: 40px;padding-bottom: 40px; width: 100vw; margin-left: calc(-50vw + 50%);">
-          <li>
-            <div class="card card-sm" style="background-color: hsl(177, 39%, 72%)">
-              <div class="card-media">
-                <ion-icon name="logo-html5"></ion-icon>
-              </div>
-
-              <h2 class="card-title">HTML5</h2>
-            </div>
-          </li>
-
-          <li>
-            <div class="card card-sm" style="background-color: hsl(41, 99%, 64%)">
-              <div class="card-media">
-                <ion-icon name="logo-css3"></ion-icon>
-              </div>
-
-              <h2 class="card-title">CSS3</h2>
-            </div>
-          </li>
-
-          <li>
-            <div class="card card-sm" style="background-color: hsl(19, 97%, 85%)">
-              <div class="card-media">
-                <ion-icon name="logo-react"></ion-icon>
-              </div>
-
-              <h2 class="card-title">React</h2>
-            </div>
-          </li>
-
-          <li>
-            <div class="card card-sm" style="background-color: hsl(221, 100%, 79%)">
-              <div class="card-media">
-                <ion-icon name="logo-angular"></ion-icon>
-              </div>
-
-              <h2 class="card-title">Angular</h2>
-            </div>
-          </li>
-
-          <li>
-            <div class="card card-sm" style="background-color: hsl(76, 39%, 72%)">
-              <div class="card-media">
-                <ion-icon name="logo-javascript"></ion-icon>
-              </div>
-              <h2 class="card-title">JavaScript</h2>
-            </div>
-          </li>
-
-          <li>
-            <div class="card card-sm" style="background-color: hsl(200, 100%, 85%)">
-              <div class="card-media">
-                <ion-icon name="logo-python"></ion-icon>
-              </div>
-              <h2 class="card-title">Python</h2>
-            </div>
-          </li>
-
-          <li>
-            <div class="card card-sm" style="background-color: hsl(245, 100%, 90%)">
-              <div class="card-media">
-                <ion-icon name="logo-nodejs"></ion-icon>
-              </div>
-
-              <h2 class="card-title">Node.js</h2>
-            </div>
-          </li>
-
-          <li>
-            <div class="card card-sm" style="background-color: hsl(140, 60%, 80%)">
-              <div class="card-media">
-                <ion-icon name="server-outline"></ion-icon>
-              </div>
-
-              <h2 class="card-title">Spring Boot</h2>
-            </div>
-          </li>
-
-          <li>
-            <div class="card card-sm" style="background-color: hsl(0, 100%, 90%)">
-              <div class="card-media">
-
-                <ion-icon name="server-outline"></ion-icon>
-              </div>
-
-              <h2 class="card-title">MongoDB</h2>
-            </div>
-          </li>
-
-          <li>
-            <div class="card card-sm" style="background-color: hsl(120, 100%, 90%)">
-              <div class="card-media">
-
-                <ion-icon name="server-outline"></ion-icon>
-              </div>
-
-              <h2 class="card-title">MySQL</h2>
-            </div>
-          </li>
-
-          <li>
-            <div class="card card-sm" style="background-color: hsl(210, 100%, 90%)">
-              <div class="card-media">
-                <ion-icon name="server-outline"></ion-icon>
-              </div>
-
-              <h2 class="card-title">MS SQL</h2>
-            </div>
-          </li>
-
-          <li>
-            <div class="card card-sm" style="background-color: hsl(280, 100%, 90%)">
-              <div class="card-media">
-
-                <ion-icon name="server-outline"></ion-icon>
-              </div>
-
-              <h2 class="card-title">PostgreSQL</h2>
-            </div>
-          </li>
-
-          <li>
-            <div class="card card-sm" style="background-color: hsl(190, 80%, 85%)">
-              <div class="card-media">
-                <ion-icon name="cloud-outline"></ion-icon>
-              </div>
-
-              <h2 class="card-title">Azure</h2>
-            </div>
-          </li>
-
-          <li>
-            <div class="card card-sm" style="background-color: hsl(210, 100%, 85%)">
-              <div class="card-media">
-                <ion-icon name="cube-outline"></ion-icon>
-              </div>
-
-              <h2 class="card-title">Docker</h2>
-            </div>
-          </li>
-
-          <li>
-            <div class="card card-sm" style="background-color: hsl(230, 80%, 85%)">
-              <div class="card-media">
-                <ion-icon name="git-branch-outline"></ion-icon>
-              </div>
-
-              <h2 class="card-title">Kubernetes</h2>
-            </div>
-          </li>
-
-          <li>
-            <div class="card card-sm" style="background-color: hsl(15, 100%, 85%)">
-              <div class="card-media">
-                <ion-icon name="git-branch-outline"></ion-icon>
-              </div>
-
-              <h2 class="card-title">Git</h2>
-            </div>
-          </li>
+        <ul class="metric-row" aria-label="Career highlights">
+          <li><strong>4+</strong><span>Years experience</span></li>
+          <li><strong>11+</strong><span>Enterprise projects</span></li>
+          <li><strong>42+</strong><span>Git repositories</span></li>
         </ul>
       </div>
     </div>
+  </section>
 
-    <!-- 
-        - #CTA
-      -->
+  <section class="client-strip" aria-label="Experience">
+    <div class="container">
+      <span>Reliance Industries</span>
+      <span>Rigved Technologies</span>
+      <span>Angular</span>
+      <span>React</span>
+      <span>Spring Boot</span>
+      <span>Azure</span>
+    </div>
+  </section>
 
-    <section class="cta" style="margin-top: 20px;">
-      <div class="container">
-        <h2 class="title-lg">Interested in working with me?</h2>
-
-        <a routerLink="/contact" class="btn btn-tertiary">Contact Now</a>
+  <section class="section about">
+    <div class="container about-grid">
+      <div class="about-media">
+        <img src="assets/images/about2.png" alt="Bhalchandra Rane working on a computer" />
       </div>
-    </section>
 
+      <div class="about-content">
+        <p class="eyebrow">About me</p>
+        <h2 class="headline-md">I turn messy requirements into maintainable products.</h2>
+        <p class="body-md">
+          My work spans self-verification platforms, gap assessment systems, plant video
+          surveillance, and Management of Change workflows. I care about clean interfaces,
+          dependable APIs, practical debugging, and shipping features that people can use without
+          friction.
+        </p>
 
-    <!-- 
-        - #TESTIMONIALS
-      -->
-
-    <section class="section testi" aria-labelledby="testi-label">
-      <div class="container">
-        <h2 class="headline-md section-title text-center" id="testi-label">
-          Live Projects
-        </h2>
-
-        <ul class="slider">
-          <li class="slider-item card-container">
-            <div class="card card-lg">
-              <figure class="card-media">
-                <img src="assets/images/poolpalava.png" loading="lazy" alt="Jennifer Lutheran" class="img-cover" />
-              </figure>
-
-              <div class="card-content">
-                <blockquote class="body-sm">
-                  Carpool App is a modern web application that allows users to
-                  register, log in, create carpools, and manage ride listings.
-                  The application focuses on real-time collaboration and without user login 
-                  required.
-                </blockquote>
-
-                <p class="client-name">Carpool App</p>
-                <p class="client-title">Next js , Java Spring boot</p>
-                <p style="display: flex;">go to : <a href="https://carpoolfrontend.vercel.app/"
-                    target="_blank">carpool-app</a></p>
-
-              </div>
-            </div>
-          </li>
-
-          <li class="slider-item card-container">
-            <div class="card card-lg">
-              <figure class="card-media">
-                <img src="assets/images/realtor.png" loading="lazy" alt="Jennifer Lutheran" class="img-cover" />
-              </figure>
-
-              <div class="card-content">
-                <blockquote class="body-sm">
-                  Realtor App is an React based application it has various feature you can register , login
-                  , sell or rent your property , create listings of properties , map
-                  we using react for frontend and firebase for backend.
-                </blockquote>
-
-                <p class="client-name">Realtor App</p>
-                <p class="client-title">React , Firebase</p>
-                <p style="display: flex;">go to : <a href="https://real-estate-application-five.vercel.app/"
-                    target="_blank">realtor-app</a></p>
-
-              </div>
-            </div>
-          </li>
-
-          <li class="slider-item card-container">
-            <div class="card card-lg">
-              <figure class="card-media">
-                <img src="assets/images/kanban.png" width="100" height="100" loading="lazy" alt="Jennifer Lutheran"
-                  class="img-cover" />
-              </figure>
-
-              <div class="card-content">
-                <blockquote class="body-sm">
-                  kanban board app is an app created using angular for the front end and
-                  firebase for the backend we have three status backlog , in progress , done you can
-                  drag and drop your notes when done.
-                </blockquote>
-
-                <p class="client-name">Kanban Board App</p>
-
-                <p class="client-title">Angular , Firebase </p>
-                <p style="display: flex;">go to : <a href="https://kanban-board-application-ykx9.vercel.app/"
-                    target="_blank">kanban-app</a></p>
-              </div>
-            </div>
-          </li>
-        </ul>
+        <div class="link-row">
+          <a href="https://github.com/Brane105" target="_blank" rel="noreferrer">
+            <ion-icon name="logo-github"></ion-icon>
+            GitHub
+          </a>
+          <a href="https://brane-portfolio-app.vercel.app/" target="_blank" rel="noreferrer">
+            <ion-icon name="briefcase-outline"></ion-icon>
+            Live Portfolio
+          </a>
+        </div>
       </div>
-    </section>
-  </article>
+    </div>
+  </section>
+
+  <section class="section skill">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Toolbox</p>
+        <h2 class="headline-md">Technologies I use to ship production work.</h2>
+      </div>
+
+      <ul class="skill-list">
+        <li><ion-icon name="logo-angular"></ion-icon><span>Angular</span></li>
+        <li><ion-icon name="logo-react"></ion-icon><span>React</span></li>
+        <li><ion-icon name="logo-nodejs"></ion-icon><span>Node.js</span></li>
+        <li><ion-icon name="server-outline"></ion-icon><span>Spring Boot</span></li>
+        <li><ion-icon name="logo-javascript"></ion-icon><span>JavaScript</span></li>
+        <li><ion-icon name="logo-python"></ion-icon><span>Python</span></li>
+        <li><ion-icon name="server-outline"></ion-icon><span>MongoDB</span></li>
+        <li><ion-icon name="server-outline"></ion-icon><span>MySQL / MSSQL</span></li>
+        <li><ion-icon name="cloud-outline"></ion-icon><span>Azure</span></li>
+        <li><ion-icon name="cube-outline"></ion-icon><span>Docker</span></li>
+        <li><ion-icon name="git-branch-outline"></ion-icon><span>Kubernetes</span></li>
+        <li><ion-icon name="logo-github"></ion-icon><span>GitHub</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section featured">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Selected builds</p>
+        <h2 class="headline-md">Live projects with full-stack thinking.</h2>
+      </div>
+
+      <div class="featured-grid">
+        <article class="project-card">
+          <img src="assets/images/poolpalava.png" alt="Carpool application screenshot" />
+          <div>
+            <span class="chip">Next.js + Spring Boot</span>
+            <h3>Carpool App</h3>
+            <p>Ride listing and carpool management with a lightweight, collaboration-first flow.</p>
+            <a href="https://carpoolfrontend.vercel.app/" target="_blank" rel="noreferrer">Open live site</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="assets/images/realtor.png" alt="Realtor application screenshot" />
+          <div>
+            <span class="chip">React + Firebase</span>
+            <h3>Realtor App</h3>
+            <p>Property listing app with login, create listing, rent/sell flows, and map support.</p>
+            <a href="https://real-estate-application-five.vercel.app/" target="_blank" rel="noreferrer">Open live site</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="assets/images/kanban.png" alt="Kanban board application screenshot" />
+          <div>
+            <span class="chip">Angular + Firebase</span>
+            <h3>Kanban Board</h3>
+            <p>Drag-and-drop board for backlog, in-progress, and done work tracking.</p>
+            <a href="https://kanban-board-application-ykx9.vercel.app/" target="_blank" rel="noreferrer">Open live site</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <div>
+        <p class="eyebrow">Available for collaboration</p>
+        <h2 class="title-lg">Need a developer who can own the full delivery path?</h2>
+      </div>
+      <a routerLink="/contact" class="btn btn-tertiary">Contact Now</a>
+    </div>
+  </section>
 </main>

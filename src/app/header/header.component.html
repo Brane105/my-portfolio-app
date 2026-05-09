@@ -1,41 +1,46 @@
-<!-- 
-    - #HEADER
-  -->
-
-  <header class="header" data-header>
-    <div class="container">
-      <a routerLink="/home" class="logo" style="display: flex; justify-content: space-around;">
-        <img src="assets/images/logo.svg" style="width: 30px" width="151" height="28" alt="Jassa home">
-        <img src="assets/images/a1.png" style="width: 50px;" width="50" height="28" alt="">
+<header class="header">
+  <div class="container header-shell">
+    <a routerLink="/home" class="brand" aria-label="Bhalchandra Rane home">
+      <span class="brand-mark">BR</span>
+      <span>
+        <strong>Bhalchandra Rane</strong>
+        <small>Full Stack Software Engineer</small>
+      </span>
     </a>
-    
-      <nav class="navbar" data-navbar [ngClass]="status ? 'active' : ''">
-        <ul class="navbar-list">
 
-          <li class="navbar-item">
-            <a routerLink="/home" class="label-lg navbar-link has-after" routerLinkActive="active">Home</a>
-          </li>
+    <nav class="navbar" [ngClass]="status ? 'active' : ''" aria-label="Primary navigation">
+      <ul class="navbar-list">
+        <li>
+          <a routerLink="/home" class="navbar-link" routerLinkActive="active" (click)="closeMenu()">
+            <ion-icon name="home-outline" aria-hidden="true"></ion-icon>
+            <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="/service" class="navbar-link" routerLinkActive="active" (click)="closeMenu()">
+            <ion-icon name="construct-outline" aria-hidden="true"></ion-icon>
+            <span>Services</span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="/portfolio" class="navbar-link" routerLinkActive="active" (click)="closeMenu()">
+            <ion-icon name="briefcase-outline" aria-hidden="true"></ion-icon>
+            <span>Portfolio</span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="/contact" class="navbar-link" routerLinkActive="active" (click)="closeMenu()">
+            <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+            <span>Contact</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
 
-          <li class="navbar-item">
-            <a routerLink="/service"  class="label-lg navbar-link has-after" routerLinkActive="active">Services</a>
-          </li>
+    <a routerLink="/contact" class="btn btn-primary header-cta">Hire Me</a>
 
-          <li class="navbar-item">
-            <a routerLink="/portfolio"  class="label-lg navbar-link has-after" routerLinkActive="active">Portfolio</a>
-          </li>
-
-          <li class="navbar-item">
-            <a routerLink="/contact"  class="label-lg navbar-link has-after" routerLinkActive="active">Contact</a>
-          </li>
-
-        </ul>
-      </nav>
-
-      <a routerLink="/contact" class="btn btn-primary">Contact Now</a>
-
-      <button class="nav-toggle-btn" aria-label="menu" data-nav-toggler (click)="addToggle()">
-        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
-      </button>
-
-    </div>
-  </header>
+    <button class="nav-toggle-btn" aria-label="Toggle menu" [attr.aria-expanded]="status" (click)="addToggle()">
+      <ion-icon [name]="status ? 'close-outline' : 'menu-outline'" aria-hidden="true"></ion-icon>
+    </button>
+  </div>
+</header>

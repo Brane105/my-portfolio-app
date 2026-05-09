@@ -1,0 +1,74 @@
+
+Initial Chunk Files                                                                                     | Names                   |  Raw Size
+vendor.js                                                                                               | vendor                  |   3.32 MB |
+polyfills.js                                                                                            | polyfills               | 333.19 kB |
+styles.css, styles.js                                                                                   | styles                  | 249.45 kB |
+main.js                                                                                                 | main                    |  74.60 kB |
+runtime.js                                                                                              | runtime                 |  14.15 kB |
+
+| Initial Total           |   3.97 MB
+
+Lazy Chunk Files                                                                                        | Names                   |  Raw Size
+polyfills-core-js.js                                                                                    | polyfills-core-js       | 152.21 kB |
+node_modules_ionic_core_dist_esm_ion-datetime_3_entry_js.js                                             | -                       | 147.11 kB |
+node_modules_ionic_core_dist_esm_ion-item_8_entry_js.js                                                 | -                       |  90.32 kB |
+node_modules_ionic_core_dist_esm_ion-modal_entry_js.js                                                  | -                       |  85.49 kB |
+node_modules_ionic_core_dist_esm_ion-select_3_entry_js.js                                               | -                       |  76.32 kB |
+node_modules_ionic_core_dist_esm_ion-app_8_entry_js.js                                                  | -                       |  75.66 kB |
+node_modules_ionic_core_dist_esm_ion-textarea_entry_js.js                                               | -                       |  63.91 kB |
+node_modules_ionic_core_dist_esm_ion-popover_entry_js.js                                                | -                       |  62.70 kB |
+node_modules_ionic_core_dist_esm_ion-input_entry_js.js                                                  | -                       |  61.37 kB |
+node_modules_ionic_core_dist_esm_ion-refresher_2_entry_js.js                                            | -                       |  59.88 kB |
+default-node_modules_ionic_core_dist_esm_data-4b448e3a_js-node_modules_ionic_core_dist_esm_th-4e82ad.js | -                       |  55.05 kB |
+node_modules_ionic_core_dist_esm_ion-alert_entry_js.js                                                  | -                       |  51.89 kB |
+node_modules_ionic_core_dist_esm_ion-range_entry_js.js                                                  | -                       |  49.16 kB |
+node_modules_ionic_core_dist_esm_ion-menu_3_entry_js.js                                                 | -                       |  44.17 kB |
+node_modules_ionic_core_dist_esm_ion-toggle_entry_js.js                                                 | -                       |  41.24 kB |
+node_modules_ionic_core_dist_esm_ion-segment_2_entry_js.js                                              | -                       |  40.94 kB |
+node_modules_ionic_core_dist_esm_ion-button_2_entry_js.js                                               | -                       |  39.93 kB |
+node_modules_ionic_core_dist_esm_ion-searchbar_entry_js.js                                              | -                       |  38.06 kB |
+node_modules_ionic_core_dist_esm_ion-nav_2_entry_js.js                                                  | -                       |  37.25 kB |
+node_modules_ionic_core_dist_esm_ion-item-option_3_entry_js.js                                          | -                       |  36.97 kB |
+node_modules_ionic_core_dist_esm_ion-route_4_entry_js.js                                                | -                       |  34.25 kB |
+node_modules_ionic_core_dist_esm_ion-toast_entry_js.js                                                  | -                       |  33.01 kB |
+node_modules_ionic_core_dist_esm_ion-radio_2_entry_js.js                                                | -                       |  32.95 kB |
+common.js                                                                                               | common                  |  31.89 kB |
+node_modules_ionic_core_dist_esm_ion-action-sheet_entry_js.js                                           | -                       |  31.61 kB |
+node_modules_ionic_core_dist_esm_ion-fab_3_entry_js.js                                                  | -                       |  28.34 kB |
+node_modules_ionic_core_dist_esm_ion-picker-column-internal_entry_js.js                                 | -                       |  28.11 kB |
+node_modules_ionic_core_dist_esm_ion-accordion_2_entry_js.js                                            | -                       |  27.67 kB |
+node_modules_ionic_core_dist_esm_ion-tab-bar_2_entry_js.js                                              | -                       |  27.24 kB |
+polyfills-dom.js                                                                                        | polyfills-dom           |  26.63 kB |
+node_modules_ionic_core_dist_esm_ion-checkbox_entry_js.js                                               | -                       |  25.52 kB |
+node_modules_ionic_core_dist_esm_ion-picker-internal_entry_js.js                                        | -                       |  24.66 kB |
+node_modules_ionic_core_dist_esm_ion-progress-bar_entry_js.js                                           | -                       |  23.99 kB |
+node_modules_ionic_core_dist_esm_ion-breadcrumb_2_entry_js.js                                           | -                       |  23.00 kB |
+node_modules_ionic_core_dist_esm_input-shims-af993f05_js.js                                             | input-shims-af993f05-js |  22.44 kB |
+node_modules_ionic_core_dist_esm_ion-loading_entry_js.js                                                | -                       |  22.02 kB |
+node_modules_ionic_core_dist_esm_ion-reorder_2_entry_js.js                                              | -                       |  20.93 kB |
+node_modules_ionic_core_dist_esm_ion-datetime-button_entry_js.js                                        | -                       |  18.44 kB |
+node_modules_ionic_core_dist_esm_ion-back-button_entry_js.js                                            | -                       |  17.71 kB |
+node_modules_ionic_core_dist_esm_ion-card_5_entry_js.js                                                 | -                       |  17.25 kB |
+default-node_modules_ionic_core_dist_esm_form-controller-ed77647a_js-node_modules_ionic_core_-d00699.js | -                       |  17.02 kB |
+default-node_modules_ionic_core_dist_esm_button-active-2da0f611_js-node_modules_ionic_core_di-fdcd25.js | -                       |  15.12 kB |
+default-node_modules_ionic_core_dist_esm_keyboard-controller-0c2dce71_js-node_modules_ionic_c-b0fbc0.js | -                       |  14.88 kB |
+node_modules_ionic_core_dist_esm_ion-infinite-scroll_2_entry_js.js                                      | -                       |  13.39 kB |
+node_modules_ionic_core_dist_esm_ion-col_3_entry_js.js                                                  | -                       |  13.28 kB |
+node_modules_ionic_core_dist_esm_ion-spinner_entry_js.js                                                | -                       |  10.91 kB |
+node_modules_ionic_core_dist_esm_ion-tab_2_entry_js.js                                                  | -                       |  10.20 kB |
+node_modules_ionic_core_dist_esm_ion-split-pane_entry_js.js                                             | -                       |   9.05 kB |
+node_modules_ionic_core_dist_esm_ion-avatar_3_entry_js.js                                               | -                       |   7.84 kB |
+node_modules_ionic_core_dist_esm_ion-chip_entry_js.js                                                   | -                       |   7.24 kB |
+node_modules_ionic_core_dist_esm_index-f0cc4e14_js.js                                                   | index-f0cc4e14-js       |   6.87 kB |
+node_modules_ionic_core_dist_esm_ion-ripple-effect_entry_js.js                                          | -                       |   6.24 kB |
+node_modules_ionic_core_dist_esm_ion-img_entry_js.js                                                    | -                       |   4.65 kB |
+node_modules_ionic_core_dist_esm_ion-text_entry_js.js                                                   | -                       |   4.18 kB |
+node_modules_ionic_core_dist_esm_ion-backdrop_entry_js.js                                               | -                       |   3.26 kB |
+node_modules_ionic_core_dist_esm_status-tap-823a0df3_js.js                                              | status-tap-823a0df3-js  |   2.91 kB |
+
+Build at: 2026-05-09T14:30:28.983Z - Hash: 2c93ecfdcd9018d7 - Time: 16606ms
+
+** Angular Live Development Server is listening on 127.0.0.1:4200, open your browser on http://127.0.0.1:4200/ **
+
+
+√ Compiled successfully.
