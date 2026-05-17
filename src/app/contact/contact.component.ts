@@ -1,67 +1,64 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
-import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
-import { NotifierService } from 'angular-notifier';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { animate, style, transition, trigger } from '@angular/animations';
+
+interface ContactForm {
+  name: FormControl<string>;
+  email: FormControl<string>;
+  subject: FormControl<string>;
+  message: FormControl<string>;
+}
+
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.css']
+  styleUrls: ['./contact.component.css'],
+  animations: [
+    trigger('successPop', [
+      transition(':enter', [
+        style({ opacity: 0, transform: 'scale(0.9) translateY(10px)' }),
+        animate('260ms ease-out', style({ opacity: 1, transform: 'scale(1) translateY(0)' }))
+      ])
+    ])
+  ]
 })
 export class ContactComponent {
-  name: any;
-  email: any;
-  subject: any;
-  message: any;
-  formdata: any;
+  submitted = false;
+  sent = false;
 
-  private notifier: NotifierService;
+  contactForm = new FormGroup<ContactForm>({
+    name: new FormControl('', { nonNullable: true, validators: [Validators.required, Validators.minLength(2)] }),
+    email: new FormControl('', { nonNullable: true, validators: [Validators.required, Validators.email] }),
+    subject: new FormControl('', { nonNullable: true, validators: [Validators.required, Validators.minLength(3)] }),
+    message: new FormControl('', { nonNullable: true, validators: [Validators.required, Validators.minLength(10)] })
+  });
 
-	/**
-	 * Constructor
-	 *
-	 * @param {NotifierService} notifier Notifier service
-	 */
-	public constructor( notifier: NotifierService ) {
-		this.notifier = notifier;
-	}
+  contactLinks = [
+    { icon: 'ti-mail', label: 'Email', value: 'branedev105@gmail.com', href: 'mailto:branedev105@gmail.com' },
+    { icon: 'ti-map-pin', label: 'Location', value: 'Mumbai, India', href: 'https://www.google.com/maps/place/Mumbai' },
+    { icon: 'ti-brand-linkedin', label: 'LinkedIn', value: 'Connect on LinkedIn', href: 'https://www.linkedin.com/' },
+    { icon: 'ti-brand-github', label: 'GitHub', value: 'View repositories', href: 'https://github.com/Brane105' }
+  ];
 
-	/**
-	 * Show a notification
-	 *
-	 * @param {string} type    Notification type
-	 * @param {string} message Notification message
-	 */
-	public showNotification( type: string, message: string ): void {
-		this.notifier.notify( type, message );
-	}
-  ngOnInit() {
-    this.formdata = new FormGroup({
-      from_name: new FormControl(null),
-      from_email: new FormControl(null),
-      subject: new FormControl(null),
-      message: new FormControl(null)
-    });
- }
-  sendEmail(data:any) {
-    // console.log(Object.values(data))
-    let data1 = Object.values(data).every(el => el !== null)
-    if(data1){
-      emailjs.send('service_a18ko9m', 'template_jwhigqe', data,'2ithvLZdAFQsBsBrt')
-      .then((response: EmailJSResponseStatus) => {
-        console.log('Email sent:', response);
-        this.showNotification( 'success', 'Email successfully sent!' );
-        this.formdata.reset();
-        // Handle success, e.g., show a success message to the user
-      }, (error) => {
-        console.error('Email sending failed:', error);
-        this.formdata.reset();
-        this.showNotification( 'error', 'Whoops, something went wrong. Probably!' );
-        // Handle error, e.g., show an error message to the user
-      });
+  sendMessage(): void {
+    this.submitted = true;
+
+    if (this.contactForm.invalid) {
+      this.contactForm.markAllAsTouched();
+      return;
     }
-    else{
-      this.formdata.reset();
-      this.showNotification( 'error', 'Whoops, Please fill all the details!' );
-    }
+
+    this.sent = true;
+    this.contactForm.reset();
+    this.submitted = false;
+
+    window.setTimeout(() => {
+      this.sent = false;
+    }, 3600);
+  }
+
+  hasError(controlName: keyof ContactForm): boolean {
+    const control = this.contactForm.controls[controlName];
+    return control.invalid && (control.touched || this.submitted);
   }
 }

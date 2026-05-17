@@ -9,3 +9,6 @@
         font-size: 10px;
       }
   }
+:host {
+  display: block;
+}

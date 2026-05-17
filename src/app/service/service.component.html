@@ -1,49 +1,22 @@
-<main>
-  <section class="section page-hero">
-    <div class="container">
-      <p class="eyebrow">Services</p>
-      <h1 class="headline-lg">Full-stack delivery for polished, practical web products.</h1>
-      <p class="body-md">
-        From frontend interfaces to backend APIs and cloud deployment, I help teams move from idea
-        to dependable software with a calm engineering process.
+<section id="services" class="section services">
+  <div class="container">
+    <div class="section-heading">
+      <p class="section-label">SERVICES</p>
+      <h2>Full-stack delivery for polished, practical web products.</h2>
+      <p>
+        From frontend interfaces to backend APIs and cloud deployment, I help teams move from idea to dependable software
+        with a calm engineering process.
       </p>
     </div>
-  </section>
 
-  <section class="section service">
-    <div class="container">
-      <ul class="service-list">
-        <li class="service-card">
-          <ion-icon name="code-working-outline"></ion-icon>
-          <h2>Web Application Development</h2>
-          <p>Responsive, accessible applications built with Angular, React, HTML, CSS, and modern JavaScript.</p>
-        </li>
-        <li class="service-card">
-          <ion-icon name="layers-outline"></ion-icon>
-          <h2>Frontend Engineering</h2>
-          <p>Component systems, stateful workflows, dashboards, forms, and interfaces that feel fast and clear.</p>
-        </li>
-        <li class="service-card">
-          <ion-icon name="server-outline"></ion-icon>
-          <h2>Backend Development</h2>
-          <p>APIs, authentication-ready flows, database integrations, and services using Node.js and Spring Boot.</p>
-        </li>
-        <li class="service-card">
-          <ion-icon name="cloud-upload-outline"></ion-icon>
-          <h2>Cloud and DevOps</h2>
-          <p>Deployment support across Azure, Vercel, Railway, Firebase, Docker, Kubernetes, and GitHub workflows.</p>
-        </li>
-        <li class="service-card">
-          <ion-icon name="bug-outline"></ion-icon>
-          <h2>Debugging and Maintenance</h2>
-          <p>Production issue analysis, refactors, performance cleanup, and steady improvement of existing systems.</p>
-        </li>
-        <li class="service-card">
-          <ion-icon name="shield-checkmark-outline"></ion-icon>
-          <h2>Quality and Architecture</h2>
-          <p>Practical code structure, testable modules, reusable patterns, and choices that keep projects maintainable.</p>
-        </li>
-      </ul>
+    <div class="service-grid" @serviceList>
+      <article class="service-card reveal-item" #serviceCard *ngFor="let service of services">
+        <span class="icon-frame">
+          <i class="ti" [ngClass]="service.icon" aria-hidden="true"></i>
+        </span>
+        <h3>{{ service.title }}</h3>
+        <p>{{ service.description }}</p>
+      </article>
     </div>
-  </section>
-</main>
+  </div>
+</section>

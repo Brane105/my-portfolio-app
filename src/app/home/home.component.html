@@ -1,142 +1,44 @@
-<main>
+<main id="home">
   <section class="hero section">
-    <div class="container hero-grid">
-      <div class="hero-content">
-        <p class="eyebrow">Mumbai based full stack engineer</p>
-        <h1 class="headline-lg">I build reliable web apps for real business workflows.</h1>
-        <p class="hero-text body-md">
-          I am Bhalchandra Rane, a software engineer with 4+ years of enterprise experience at
-          Reliance Industries, focused on Angular, React, Node.js, Spring Boot, databases, and
-          cloud-ready deployments.
-        </p>
+    <div class="hero-pattern" aria-hidden="true"></div>
+    <div class="container hero-inner">
+      <p class="section-label hero-label" @fadeUp>MUMBAI BASED FULL STACK ENGINEER</p>
+      <h1 class="hero-title" @fadeUp>I build reliable web apps for real business workflows.</h1>
+      <p class="hero-copy" @fadeUp>
+        I am Bhalchandra Rane, a software engineer with 4+ years of enterprise experience at Reliance Industries,
+        focused on Angular, React, Node.js, Spring Boot, databases, and cloud-ready deployments.
+      </p>
+      <div class="hero-actions" @fadeUp>
+        <button class="btn btn-dark" type="button" (click)="scrollTo('portfolio')">View Projects</button>
+        <button class="btn btn-light" type="button" (click)="scrollTo('contact')">Start a Conversation</button>
+      </div>
 
-        <div class="hero-actions">
-          <a routerLink="/portfolio" class="btn btn-primary">View Projects</a>
-          <a routerLink="/contact" class="btn btn-secondary">Start a Conversation</a>
-        </div>
-
-        <ul class="metric-row" aria-label="Career highlights">
-          <li><strong>4+</strong><span>Years experience</span></li>
-          <li><strong>11+</strong><span>Enterprise projects</span></li>
-          <li><strong>42+</strong><span>Git repositories</span></li>
-        </ul>
+      <div class="stat-grid" aria-label="Professional stats">
+        <article class="stat-card" *ngFor="let stat of stats; let i = index">
+          <strong #statValue>0{{ stat.suffix }}</strong>
+          <span>{{ stat.label }}</span>
+        </article>
       </div>
     </div>
   </section>
 
-  <section class="client-strip" aria-label="Experience">
-    <div class="container">
-      <span>Reliance Industries</span>
-      <span>Rigved Technologies</span>
-      <span>Angular</span>
-      <span>React</span>
-      <span>Spring Boot</span>
-      <span>Azure</span>
-    </div>
-  </section>
-
-  <section class="section about">
-    <div class="container about-grid">
-      <div class="about-media">
-        <img src="assets/images/about2.png" alt="Bhalchandra Rane working on a computer" />
-      </div>
-
-      <div class="about-content">
-        <p class="eyebrow">About me</p>
-        <h2 class="headline-md">I turn messy requirements into maintainable products.</h2>
-        <p class="body-md">
-          My work spans self-verification platforms, gap assessment systems, plant video
-          surveillance, and Management of Change workflows. I care about clean interfaces,
-          dependable APIs, practical debugging, and shipping features that people can use without
-          friction.
-        </p>
-
-        <div class="link-row">
-          <a href="https://github.com/Brane105" target="_blank" rel="noreferrer">
-            <ion-icon name="logo-github"></ion-icon>
-            GitHub
-          </a>
-          <a href="https://brane-portfolio-app.vercel.app/" target="_blank" rel="noreferrer">
-            <ion-icon name="briefcase-outline"></ion-icon>
-            Live Portfolio
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section skill">
+  <section id="toolbox" class="section toolbox">
     <div class="container">
       <div class="section-heading">
-        <p class="eyebrow">Toolbox</p>
-        <h2 class="headline-md">Technologies I use to ship production work.</h2>
+        <p class="section-label">TOOLBOX</p>
+        <h2>Technologies I use to ship production work.</h2>
       </div>
 
-      <ul class="skill-list">
-        <li><ion-icon name="logo-angular"></ion-icon><span>Angular</span></li>
-        <li><ion-icon name="logo-react"></ion-icon><span>React</span></li>
-        <li><ion-icon name="logo-nodejs"></ion-icon><span>Node.js</span></li>
-        <li><ion-icon name="server-outline"></ion-icon><span>Spring Boot</span></li>
-        <li><ion-icon name="logo-javascript"></ion-icon><span>JavaScript</span></li>
-        <li><ion-icon name="logo-python"></ion-icon><span>Python</span></li>
-        <li><ion-icon name="server-outline"></ion-icon><span>MongoDB</span></li>
-        <li><ion-icon name="server-outline"></ion-icon><span>MySQL / MSSQL</span></li>
-        <li><ion-icon name="cloud-outline"></ion-icon><span>Azure</span></li>
-        <li><ion-icon name="cube-outline"></ion-icon><span>Docker</span></li>
-        <li><ion-icon name="git-branch-outline"></ion-icon><span>Kubernetes</span></li>
-        <li><ion-icon name="logo-github"></ion-icon><span>GitHub</span></li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="section featured">
-    <div class="container">
-      <div class="section-heading">
-        <p class="eyebrow">Selected builds</p>
-        <h2 class="headline-md">Live projects with full-stack thinking.</h2>
-      </div>
-
-      <div class="featured-grid">
-        <article class="project-card">
-          <img src="assets/images/poolpalava.png" alt="Carpool application screenshot" />
-          <div>
-            <span class="chip">Next.js + Spring Boot</span>
-            <h3>Carpool App</h3>
-            <p>Ride listing and carpool management with a lightweight, collaboration-first flow.</p>
-            <a href="https://carpoolfrontend.vercel.app/" target="_blank" rel="noreferrer">Open live site</a>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <img src="assets/images/realtor.png" alt="Realtor application screenshot" />
-          <div>
-            <span class="chip">React + Firebase</span>
-            <h3>Realtor App</h3>
-            <p>Property listing app with login, create listing, rent/sell flows, and map support.</p>
-            <a href="https://real-estate-application-five.vercel.app/" target="_blank" rel="noreferrer">Open live site</a>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <img src="assets/images/kanban.png" alt="Kanban board application screenshot" />
-          <div>
-            <span class="chip">Angular + Firebase</span>
-            <h3>Kanban Board</h3>
-            <p>Drag-and-drop board for backlog, in-progress, and done work tracking.</p>
-            <a href="https://kanban-board-application-ykx9.vercel.app/" target="_blank" rel="noreferrer">Open live site</a>
-          </div>
+      <div class="tech-grid">
+        <article class="tech-card reveal-item" #revealItem *ngFor="let tech of technologies">
+          <img [src]="iconUrl(tech.icon)" [alt]="tech.name + ' icon'" width="34" height="34" loading="lazy">
+          <strong>{{ tech.name }}</strong>
         </article>
       </div>
     </div>
   </section>
 
-  <section class="cta">
-    <div class="container">
-      <div>
-        <p class="eyebrow">Available for collaboration</p>
-        <h2 class="title-lg">Need a developer who can own the full delivery path?</h2>
-      </div>
-      <a routerLink="/contact" class="btn btn-tertiary">Contact Now</a>
-    </div>
-  </section>
+  <app-service></app-service>
+  <app-portfolio></app-portfolio>
+  <app-contact></app-contact>
 </main>

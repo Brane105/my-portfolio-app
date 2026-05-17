@@ -1,77 +1,64 @@
-<main>
-  <section class="section page-hero contact-hero">
-    <div class="container">
-      <p class="eyebrow">Contact</p>
-      <h1 class="headline-lg">Let us build something dependable and sharp.</h1>
-      <p class="body-md">
-        Send a message for project work, collaboration, or a quick technical conversation. I am based
-        in Mumbai, Maharashtra and work across modern web stacks.
-      </p>
+<section id="contact" class="section contact">
+  <div class="contact-pattern" aria-hidden="true"></div>
+  <div class="container">
+    <div class="section-heading">
+      <p class="section-label">CONTACT</p>
+      <h2>Let's build something worth shipping.</h2>
     </div>
-  </section>
 
-  <section class="section contact">
-    <div class="container contact-grid">
-      <form [formGroup]="formdata" (ngSubmit)="sendEmail(formdata.value)" class="contact-form">
-        <h2 class="headline-sm" id="contact-label">Tell me about your project</h2>
-        <p class="contact-text body-md">A few details are enough to start the conversation.</p>
-
-        <div class="wrapper">
-          <div>
-            <label for="from_name" class="label">Name</label>
-            <input type="text" name="from_name" id="from_name" formControlName="from_name" placeholder="Your name" required class="input-field" />
-          </div>
-
-          <div>
-            <label for="email" class="label">Email</label>
-            <input type="email" name="email" id="email" formControlName="from_email" placeholder="you@example.com" required class="input-field" />
-          </div>
-        </div>
-
-        <label for="subject" class="label">Subject</label>
-        <input type="text" name="subject" formControlName="subject" id="subject" placeholder="What should we discuss?" class="input-field" />
-
-        <label for="message" class="label">Message</label>
-        <textarea name="message" id="message" formControlName="message" placeholder="Share goals, timeline, stack, or links." required class="input-field"></textarea>
-
-        <button type="submit" class="btn btn-primary">Send Message</button>
-      </form>
-
-      <aside class="contact-panel">
-        <h2>Connect directly</h2>
-        <ul class="contact-list">
-          <li class="contact-item">
-            <ion-icon name="logo-github"></ion-icon>
-            <div>
-              <p>GitHub</p>
-              <a href="https://github.com/Brane105" target="_blank" rel="noreferrer">github.com/Brane105</a>
-            </div>
-          </li>
-          <li class="contact-item">
-            <ion-icon name="mail-outline"></ion-icon>
-            <div>
-              <p>Email</p>
-              <a href="mailto:lucidev25@gmail.com">lucidev25@gmail.com</a>
-            </div>
-          </li>
-          <li class="contact-item">
-            <ion-icon name="grid-outline"></ion-icon>
-            <div>
-              <p>Replit</p>
-              <a href="https://replit.com/@BhalchandraRane" target="_blank" rel="noreferrer">BhalchandraRane</a>
-            </div>
-          </li>
-          <li class="contact-item">
-            <ion-icon name="location-outline"></ion-icon>
-            <div>
-              <p>Location</p>
-              <address>Mumbai, Maharashtra, India</address>
-            </div>
-          </li>
-        </ul>
+    <div class="contact-grid">
+      <aside class="contact-info" aria-label="Contact information">
+        <a
+          class="contact-card"
+          *ngFor="let item of contactLinks"
+          [href]="item.href"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <span class="icon-frame">
+            <i class="ti" [ngClass]="item.icon" aria-hidden="true"></i>
+          </span>
+          <span>
+            <small>{{ item.label }}</small>
+            <strong>{{ item.value }}</strong>
+          </span>
+        </a>
       </aside>
 
-      <notifier-container></notifier-container>
+      <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="sendMessage()" novalidate>
+        <div class="field-grid">
+          <label>
+            <span>Name</span>
+            <input type="text" formControlName="name" autocomplete="name" placeholder="Your name">
+            <small *ngIf="hasError('name')">Please enter your name.</small>
+          </label>
+
+          <label>
+            <span>Email</span>
+            <input type="email" formControlName="email" autocomplete="email" placeholder="you@example.com">
+            <small *ngIf="hasError('email')">Please enter a valid email.</small>
+          </label>
+        </div>
+
+        <label>
+          <span>Subject</span>
+          <input type="text" formControlName="subject" placeholder="Project or collaboration">
+          <small *ngIf="hasError('subject')">Please add a subject.</small>
+        </label>
+
+        <label>
+          <span>Message</span>
+          <textarea formControlName="message" rows="6" placeholder="Tell me what you want to build"></textarea>
+          <small *ngIf="hasError('message')">Please share a few more details.</small>
+        </label>
+
+        <button class="btn btn-dark" type="submit">Send Message</button>
+
+        <div class="success-message" *ngIf="sent" @successPop>
+          <i class="ti ti-circle-check" aria-hidden="true"></i>
+          Message ready. I will get back to you soon.
+        </div>
+      </form>
     </div>
-  </section>
-</main>
+  </div>
+</section>

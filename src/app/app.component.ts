@@ -50,6 +50,11 @@ export class AppComponent implements OnInit {
         this.meta.updateTag({ name: 'twitter:title', content: pageTitle });
         this.meta.updateTag({ name: 'twitter:description', content: description });
         this.meta.updateTag({ name: 'twitter:image', content: image });
+
+        window.setTimeout(() => {
+          const section = data['section'] || 'home';
+          document.getElementById(section)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 80);
       });
   }
 

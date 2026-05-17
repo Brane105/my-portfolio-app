@@ -1,46 +1,34 @@
-<header class="header">
-  <div class="container header-shell">
-    <a routerLink="/" class="brand" aria-label="Bhalchandra Rane home">
+<header class="site-header" [class.is-scrolled]="scrolled">
+  <div class="container nav-shell">
+    <a class="brand" routerLink="/home" (click)="closeMenu()" aria-label="Bhalchandra Rane home">
       <span class="brand-mark">BR</span>
-      <span>
+      <span class="brand-copy">
         <strong>Bhalchandra Rane</strong>
         <small>Full Stack Software Engineer</small>
       </span>
     </a>
 
-    <nav class="navbar" [ngClass]="status ? 'active' : ''" aria-label="Primary navigation">
-      <ul class="navbar-list">
-        <li>
-          <a routerLink="/" class="navbar-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">
-            <ion-icon name="home-outline" aria-hidden="true"></ion-icon>
-            <span>Home</span>
-          </a>
-        </li>
-        <li>
-          <a routerLink="/service" class="navbar-link" routerLinkActive="active" (click)="closeMenu()">
-            <ion-icon name="construct-outline" aria-hidden="true"></ion-icon>
-            <span>Services</span>
-          </a>
-        </li>
-        <li>
-          <a routerLink="/portfolio" class="navbar-link" routerLinkActive="active" (click)="closeMenu()">
-            <ion-icon name="briefcase-outline" aria-hidden="true"></ion-icon>
-            <span>Portfolio</span>
-          </a>
-        </li>
-        <li>
-          <a routerLink="/contact" class="navbar-link" routerLinkActive="active" (click)="closeMenu()">
-            <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
-            <span>Contact</span>
-          </a>
-        </li>
-      </ul>
+    <nav class="nav-menu" [class.is-open]="menuOpen" aria-label="Primary navigation">
+      <a
+        *ngFor="let item of navItems"
+        class="nav-link"
+        [routerLink]="item.route"
+        routerLinkActive="active"
+        (click)="closeMenu()"
+      >
+        <i class="ti" [ngClass]="item.icon" aria-hidden="true"></i>
+        <span>{{ item.label }}</span>
+      </a>
     </nav>
 
-    <a routerLink="/contact" class="btn btn-primary header-cta">Hire Me</a>
-
-    <button class="nav-toggle-btn" aria-label="Toggle menu" [attr.aria-expanded]="status" (click)="addToggle()">
-      <ion-icon [name]="status ? 'close-outline' : 'menu-outline'" aria-hidden="true"></ion-icon>
-    </button>
+    <div class="nav-actions">
+      <button class="icon-btn theme-toggle" type="button" (click)="toggleTheme()" [attr.aria-label]="darkMode ? 'Use light mode' : 'Use dark mode'">
+        <i class="ti" [ngClass]="darkMode ? 'ti-sun' : 'ti-moon'" aria-hidden="true"></i>
+      </button>
+      <a class="btn btn-dark nav-cta" routerLink="/contact">Hire Me</a>
+      <button class="icon-btn menu-toggle" type="button" (click)="toggleMenu()" [attr.aria-expanded]="menuOpen" aria-label="Toggle menu">
+        <i class="ti" [ngClass]="menuOpen ? 'ti-x' : 'ti-menu-2'" aria-hidden="true"></i>
+      </button>
+    </div>
   </div>
 </header>
