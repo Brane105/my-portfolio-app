@@ -33,7 +33,7 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
     { name: 'Python', icon: 'python' },
     { name: 'MongoDB', icon: 'mongodb' },
     { name: 'MySQL / MSSQL', icon: 'mysql' },
-    { name: 'Azure', icon: 'assets/images/Downloads/Microsoft_Azure.svg' },
+    { name: 'Azure', icon: 'assets/images/Microsoft_Azure.svg' },
     { name: 'Docker', icon: 'docker' },
     { name: 'Kubernetes', icon: 'kubernetes' },
     { name: 'GitHub', icon: 'github' }

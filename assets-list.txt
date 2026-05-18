@@ -20,7 +20,7 @@ src/assets/images/contact.jpg
 src/assets/images/kanban.png
 src/assets/images/kanbanport.png
 src/assets/images/logo.svg
-src/assets/images/Downloads/Microsoft_Azure.svg
+src/assets/images/Microsoft_Azure.svg
 src/assets/images/poolpalava.png
 src/assets/images/programming_tips.jpg
 src/assets/images/quote-left.svg
